@@ -1,13 +1,14 @@
+'use client';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import Container from 'src/common/Container/Container';
-import { DiscordIcon, LinkedInIcon, MediumIcon, NoNameIcon1, NoNameIcon2, TeleIcon, TwitterIcon, YoutubeIcon } from 'src/Constants/icons/incons';
+import { DiscordIcon, LinkedInIcon, MediumIcon, ZealyIcon1, TaskOnIcon, TeleIcon, TwitterIcon, YoutubeIcon } from 'src/Constants/icons/incons';
 import { imagePath } from 'src/Constants/imagePath';
 
 export default function Community() {
     return (
         <Container style={{ marginTop: '120px' }}>
-            <div style={{ border: '2px solid #8BE4BE', background: '#0E1713', borderRadius: '20px', width: '100%', display: 'flex', position: 'relative' }}>
+            <div data-aos="fade-up" style={{ border: '2px solid #8BE4BE', background: '#0E1713', borderRadius: '20px', width: '100%', display: 'flex', position: 'relative' }}>
                 <div style={{ width: '50%', overflow: 'hidden' }}>
                     <Image src={imagePath.COMMUNITY_BANNER} alt="community" width={412} height={347} className="community" style={{ position: 'absolute', left: 0, bottom: 0 }} />
                 </div>
@@ -20,14 +21,30 @@ export default function Community() {
                     </span>
                     <p style={{ color: '#95A7AC', maxWidth: '340px' }}>Engage with the community, ask questions, participate in AMAs and more!</p>
                     <div style={{ display: 'flex', placeItems: 'center', marginTop: '40px', gap: '10px', flexWrap: 'wrap' }}>
-                        <BoxComunity Icon={<TwitterIcon fill="#616161" />} />
-                        <BoxComunity Icon={<TeleIcon fill="#616161" />} />
-                        <BoxComunity Icon={<DiscordIcon fill="#616161" />} />
-                        <BoxComunity Icon={<MediumIcon fill="#616161" />} />
-                        <BoxComunity Icon={<YoutubeIcon fill="#616161" />} />
-                        <BoxComunity Icon={<LinkedInIcon fill="#616161" />} />
-                        <BoxComunity Icon={<NoNameIcon1 fill="#616161" />} />
-                        <BoxComunity Icon={<NoNameIcon2 fill="#616161" />} />
+                        <a href={'https://x.com/orchai_protocol'} target="_blank" rel="noreferrer">
+                            <BoxComunity Icon={TwitterIcon} />
+                        </a>
+                        <a href={'https://t.me/orchaiofficial'} target="_blank" rel="noreferrer">
+                            <BoxComunity Icon={TeleIcon} />
+                        </a>
+                        <a href={'https://discord.gg/WjKEbQFBcP'} target="_blank" rel="noreferrer">
+                            <BoxComunity Icon={DiscordIcon} />
+                        </a>
+                        <a href={'https://blog.orchai.io/'} target="_blank" rel="noreferrer">
+                            <BoxComunity Icon={MediumIcon} />
+                        </a>
+                        <a href={'https://www.youtube.com/@orchaiofficialchannel'} target="_blank" rel="noreferrer">
+                            <BoxComunity Icon={YoutubeIcon} />
+                        </a>
+                        <a href={'https://www.linkedin.com/company/orchai/'} target="_blank" rel="noreferrer">
+                            <BoxComunity Icon={LinkedInIcon} />
+                        </a>
+                        <a href={'https://zealy.io/c/orchaiprotocol/questboard'} target="_blank" rel="noreferrer">
+                            <BoxComunity Icon={TaskOnIcon} />
+                        </a>
+                        <a href={'https://taskon.xyz/space/604235'} target="_blank" rel="noreferrer">
+                            <BoxComunity Icon={ZealyIcon1} />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -35,10 +52,16 @@ export default function Community() {
     );
 }
 
-function BoxComunity({ Icon }: { Icon: React.JSX.Element }) {
+function BoxComunity({ Icon }: { Icon: (props: React.CSSProperties, fill: string) => React.JSX.Element }) {
+    const [isHovered, setIsHovered] = useState(false);
     return (
-        <div className="box-comunity" style={{ width: '40px', height: '40px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
-            {Icon}
+        <div
+            className="box-comunity"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            style={{ width: '40px', height: '40px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}
+        >
+            {<Icon fill={isHovered ? '#0E1713' : '#616161'} />}
         </div>
     );
 }

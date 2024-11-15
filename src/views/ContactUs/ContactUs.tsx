@@ -38,7 +38,7 @@ export default function ContactUs() {
                         }}
                     >
                         <input placeholder="Enter your email..." type="email" style={{ background: '#1B2626', color: 'white', border: '0px solid', outline: 'none' }}></input>
-                        <button style={{ background: 'linear-gradient(276deg, #69F59D -12.14%, #00A178 53.02%, #02513D 100%)', width: '141px', height: '37px', borderRadius: '22px' }}>
+                        <button className="button-gardient" style={{ width: '141px', height: '37px', borderRadius: '22px', padding: '5px 5px' }}>
                             <a style={{ color: 'white', fontWeight: 600, fontSize: '15px' }}>Send</a>
                         </button>
                     </div>

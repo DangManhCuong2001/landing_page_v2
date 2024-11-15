@@ -8,12 +8,13 @@ export default function Ecosystem() {
     return (
         <div className="ecosystem" style={{ paddingTop: '100px', zIndex: 4, position: 'relative' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '20px' }}>
-                <div>
-                    <p style={{ fontWeight: 700, fontSize: '52px', lineHeight: '55px' }}>Orchai</p>
+                <div data-aos="fade-up">
+                    <p className="h1" style={{ lineHeight: '55px' }}>
+                        Orchai
+                    </p>
                     <p
+                        className="h1"
                         style={{
-                            fontSize: '52px',
-                            fontWeight: '700',
                             background: 'linear-gradient(270deg, #69F59D 3.57%, #00A178 69.61%, #02513D 117.23%)',
                             backgroundClip: 'text',
                             WebkitBackgroundClip: 'text',
@@ -23,11 +24,14 @@ export default function Ecosystem() {
                         Ecosystem
                     </p>
                 </div>
-                <div className="grid-text-2" style={{ textAlign: 'right' }}>
+
+                <div data-aos="fade-up" className="grid-text-2" style={{ textAlign: 'right' }}>
                     <p style={{ fontWeight: 700, fontSize: '28px', color: '#57645E' }}>Low-code DeFi Management</p>
                     <p style={{ fontWeight: 400, fontSize: '20px', color: '#95A7AC' }}>Enjoy APR up to 900% with Smart Liquidity</p>
-                    <button style={{ background: 'linear-gradient(276deg, #69F59D -12.14%, #00A178 53.02%, #02513D 100%)', width: '160px', height: '42px', borderRadius: '22px', marginTop: '10px' }}>
-                        <a style={{ color: 'white', fontWeight: 600, fontSize: '15px' }}>Explore</a>
+                    <button className="button-gardient" style={{ width: '160px', height: '42px', borderRadius: '22px', marginTop: '10px' }}>
+                        <a href={'https://app.orchai.io/ai/auto-trader/smart-liquidity/oraichain'} target="_blank" rel="noreferrer" style={{ color: 'white', fontWeight: 600, fontSize: '15px' }}>
+                            Explore
+                        </a>
                     </button>
                 </div>
             </div>

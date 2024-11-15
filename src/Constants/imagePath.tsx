@@ -1,4 +1,8 @@
+import THUMBNAIL from '../../public/img/thumbnail.png';
+
 export const imagePath = {
+    THUMBNAIL,
+
     LOGO_FULL_HORIZONTAL_WHITE: '/logo/orchai_logo_full_horizontal_white.png',
     ICON_ORAICHAIN: '/logo/icon-oraichain.png',
     ICON_TRON: '/logo/icon-tron.png',
@@ -39,6 +43,9 @@ export const imagePath = {
     BLOG_1: '/img/blog-1.png',
     BLOG_2: '/img/blog-2.png',
     BLOG_3: '/img/blog-3.png',
+    BLOG_4: '/img/blog-4.png',
+    BLOG_5: '/img/blog-5.png',
+    BLOG_6: '/img/blog-6.png',
     TEST: '/img/test.png',
     TEST2: '/img/test-2.png',
     BANNER_FRAME_1: '/img/banner-frame-1.png',

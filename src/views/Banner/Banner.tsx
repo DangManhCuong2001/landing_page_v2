@@ -1,10 +1,8 @@
 import React from 'react';
-import 'src/styles/banner.scss';
 import Header from '../../Layout/Header/Header';
-import { LINK_APP_ORCHAI, LINK_DOCUMENTATION } from 'src/Constants';
+import { LINK_DOCUMENTATION } from 'src/Constants';
 import ButtonLaunchDapps from 'src/common/ButtonLaunchDapps/ButtonLaunchDapps';
-import { ArrowRightIcon, ExploreIcon, HahaIcon } from 'src/Constants/icons/incons';
-import GridTotalValue from '../GridTotalValue/GridTotalValue';
+import { ExploreIcon } from 'src/Constants/icons/incons';
 import Image from 'next/image';
 import { imagePath } from 'src/Constants/imagePath';
 import Container from 'src/common/Container/Container';
@@ -35,31 +33,30 @@ export default function Banner() {
                     <Header />
                     <div style={{ marginTop: 60, position: 'relative' }}>
                         <div style={{ position: 'relative', zIndex: 1 }}>
-                            <p
+                            <span
                                 className={SERVETICA_400.className}
                                 style={{
-                                    // fontFamily: 'Servetica',
                                     fontWeight: '500',
-
                                     textShadow: '0 1px 12px rgb(78 184 214 / 39%), 0 1px 21px rgb(78 184 214 / 71%)',
-
                                     fontSize: '48px',
                                     color: 'white',
                                 }}
                             >
-                                DEFI{' '}
-                                <p className={SERVETICA_400.className} style={{ color: '#49E18D' }}>
+                                <p data-aos="fade-right">DEFI </p>
+                                <p data-aos="fade-right" data-aos-delay="300" className={SERVETICA_400.className} style={{ color: '#49E18D' }}>
                                     ORCH
                                     <span style={{ color: 'white' }}>ESTRATOR</span>
                                 </p>
-                                <div>
+                                <p data-aos="fade-right" data-aos-delay="600">
                                     <span>POWERED BY </span>
                                     <span className={SERVETICA_400.className} style={{ color: '#49E18D' }}>
                                         AI
                                     </span>
-                                </div>
-                            </p>
+                                </p>
+                            </span>
                             <div
+                                data-aos="zoom-out"
+                                data-aos-delay="900"
                                 style={{
                                     height: '46px',
                                     width: '410px',
@@ -70,7 +67,7 @@ export default function Banner() {
                                     margin: '20px 0 ',
                                 }}
                             >
-                                <p
+                                <span
                                     style={{
                                         color: '#95A7AC',
                                         fontFamily: 'Arial',
@@ -78,9 +75,9 @@ export default function Banner() {
                                     }}
                                 >
                                     Maximized DeFi Passive Incomes with <span style={{ color: '#49E18D' }}>Smart Wallet</span>
-                                </p>
+                                </span>
                             </div>
-                            <div style={{ marginTop: 5, display: 'inline-flex', height: '46px', alignItems: 'center' }}>
+                            <div data-aos="fade-right" ata-aos-delay="1200" style={{ marginTop: 5, display: 'inline-flex', height: '46px', alignItems: 'center' }}>
                                 <ButtonLaunchDapps />
                                 <div
                                     style={{
@@ -101,7 +98,7 @@ export default function Banner() {
                                 </div>
                             </div>
                         </div>
-                        <div style={{ position: 'absolute', top: '-100px', right: '-60px', zIndex: 0, width: '50%' }}>
+                        <div className="video-banner" style={{ position: 'absolute', top: '-100px', right: '-60px', zIndex: 0, width: '50%' }}>
                             <div style={{ maxWidth: '900px', marginTop: '100px', height: '500px', overflow: 'hidden' }}>
                                 <video style={{ pointerEvents: 'none', userSelect: 'none', width: '100%', height: 'calc(90% + 2px)' }} autoPlay loop muted>
                                     <source src="/video/hero_banner_orchai_landing.mp4" type="video/mp4" />

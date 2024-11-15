@@ -1,64 +1,18 @@
 .banner {
-    @apply bg-bgBanner w-full h-[100%];
-    .container-banner {
+    /* @apply bg-bgBanner w-full h-[100%]; */
+    background-color: #0e1713;
+    width: '100%';
+
+    @media (max-width: 1024px) {
+        height: 70svh !important;
     }
-    // .toltal-value {
-    //     position: relative; /* Đặt để chứa vị trí tuyệt đối của box2 */
-    //     display: flex;
-    //     gap: 10px;
-    //     width: 100%;
-    //     // margin-left: 40vh;
-    // }
+
+    @media (max-width: 600px) {
+        height: 95svh !important;
+        .video-banner {
+            top: 180px !important;
+            right: 100px !important;
+            width: 60% !important;
+        }
+    }
 }
-
-// @media (max-width: 1150px) {
-//     .toltal-value {
-//         display: block;
-//         // margin-left: 40vh;
-//     }
-
-//     // /* Đặt box2 lên hàng đầu mà không ảnh hưởng đến thứ tự box1 */
-//     .box2 {
-//         position: absolute;
-//         top: -120;
-//         left: 0;
-
-//         // transform: translateX(-50%);
-//     }
-// }
-
-// @media (max-width: 1150px) {
-//     .toltal-value {
-//         margin-left: 10vh !important;
-//         // .box1 {
-//         //     padding: 5px 10px !important;
-//         //     height: 90px !important;
-//         //     width: 160px !important;
-//         //     min-width: unset !important;
-//         //     .title-box-1 {
-//         //         font-size: 12px !important;
-//         //     }
-//         //     .value-box-1 {
-//         //         font-size: 36px !important;
-//         //         line-height: 40px !important;
-//         //     }
-//         // }
-//         // .box2 {
-//         //     padding: 5px 10px !important;
-//         //     height: 90px !important;
-//         //     width: 160px !important;
-//         //     min-width: unset !important;
-//         //     top: -100 !important;
-//         //     .title-box-2 {
-//         //         font-size: 12px !important;
-//         //     }
-//         //     .value-box-2 {
-//         //         line-height: 40px !important;
-//         //         font-size: 36px !important;
-//         //     }
-//         //     .link-box-2 {
-//         //         font-size: 12px !important;
-//         //     }
-//         // }
-//     }
-// }

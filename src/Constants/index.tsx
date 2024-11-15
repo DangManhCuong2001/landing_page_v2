@@ -15,5 +15,10 @@ export const LINK_COMBINATOR_DOC = 'https://ai.orchai.io/combinator';
 export const LINK_APP_AUTOTRADER_SMART_STAKING = 'https://app.orchai.io/ai/auto-trader/smart-staking';
 export const LINK_APP_AUTOTRADER_SMART_EXCHANGE = 'https://app.orchai.io/ai/auto-trader/smart-exchange';
 export const LINK_APP_SMART_LIQUIDITY = 'https://app.orchai.io/ai/auto-trader/smart-liquidity';
+export const LINK_APP_MONEY_MARKET_BORROW = 'https://app.orchai.io/money-market/borrow/unlimitedborrow';
 
 export const LINK_BOT_TELEGRAM = 'https://t.me/OrchaiAlertHubBot';
+
+export const SITE_URL: string = 'https://orchai.io';
+export const SITE_TITLE: string = 'Orchai - DeFi Orchestrator Powered by AI';
+export const SITE_DESCRIPTION: string = 'Orchai - DeFi Orchestrator Powered by AI built on Oraichain Mainnet and for Oraichain ecosystem.';

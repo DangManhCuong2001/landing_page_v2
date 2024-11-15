@@ -1,10 +1,59 @@
 import Image from 'next/image';
 import React from 'react';
 import Container from 'src/common/Container/Container';
+import { LINK_APP_SMART_LIQUIDITY } from 'src/Constants';
 import { ArrowRightIcon } from 'src/Constants/icons/incons';
 import { imagePath } from 'src/Constants/imagePath';
+import { compactNumber } from 'src/utils/format';
 
-export default function SubBanner() {
+export interface LandingPageData {
+    moneyMarketTVL: string;
+    liquidStakingTVL: string;
+    numberSmartWallet: string;
+    totalXOCHClaim: string;
+    totalXOCHHolder: string;
+    compoundStakingTVL: string;
+    totalOchStake: string;
+    totalUserStakeOCH: string;
+}
+
+async function getData() {
+    try {
+        const res = await fetch('https://api.orchai.io/dashboard/lending-page', { cache: 'no-store' });
+        // if (!res.ok) {
+        //     throw new Error('Failed to fetch data');
+        // }
+
+        const response = await res.json();
+        // console.log(response);
+
+        const filterData: LandingPageData = {
+            moneyMarketTVL: response.money_market_tvl,
+            liquidStakingTVL: response.liquid_staking_tvl,
+            numberSmartWallet: response.number_smart_wallet,
+            totalXOCHClaim: response.total_XOCH_claim,
+            totalXOCHHolder: response.total_XOCH_holder,
+            compoundStakingTVL: response.total_compound_staking_in_usdt,
+            totalOchStake: response.total_och_stake,
+            totalUserStakeOCH: response.total_user_stake_och,
+        };
+        return filterData;
+    } catch (err) {
+        console.log(err);
+    }
+    return {
+        moneyMarketTVL: '0',
+        liquidStakingTVL: '0',
+        numberSmartWallet: '0',
+        totalXOCHClaim: '0',
+        totalXOCHHolder: '0',
+        compoundStakingTVL: '0',
+        totalOchStake: '0',
+    } as LandingPageData;
+}
+
+export default async function SubBanner() {
+    const data = await getData();
     return (
         <div className="sub-banner" style={{ height: '145px' }}>
             <div
@@ -24,7 +73,7 @@ export default function SubBanner() {
                         <Image
                             data-aos="fade-right"
                             data-aos-easing="ease-in-sine"
-                            // data-aos-offset="300"
+                            data-aos-offset="0"
                             src={imagePath.ICON_ORAICHAIN}
                             alt="logo oraichain"
                             title="logo oraichain"
@@ -35,6 +84,7 @@ export default function SubBanner() {
                         <Image
                             data-aos-delay="600"
                             data-aos="fade-right"
+                            data-aos-offset="0"
                             data-aos-easing="ease-in-sine"
                             src={imagePath.ICON_TRON}
                             alt="logo tron"
@@ -47,6 +97,7 @@ export default function SubBanner() {
                             data-aos="fade-right"
                             data-aos-easing="ease-in-sine"
                             data-aos-delay="1200"
+                            data-aos-offset="0"
                             src={imagePath.ICON_ORAIDEX}
                             alt="logo oraidex"
                             title="logo oraidex"
@@ -57,6 +108,7 @@ export default function SubBanner() {
                         <Image
                             data-aos-delay="1800"
                             data-aos="fade-right"
+                            data-aos-offset="0"
                             data-aos-easing="ease-in-sine"
                             src={imagePath.ICON_LEAP}
                             alt="logo leap"
@@ -68,7 +120,7 @@ export default function SubBanner() {
                     </div>
                 </div>
             </div>
-            <div className="item2">
+            <div className="item2" data-aos="zoom-out" data-aos-delay="900">
                 <div
                     className="toltal-value"
                     style={{
@@ -105,7 +157,7 @@ export default function SubBanner() {
                                 lineHeight: '57px',
                             }}
                         >
-                            $500K
+                            ${compactNumber(Number(data?.moneyMarketTVL) + Number(data?.liquidStakingTVL))}
                         </p>
                     </div>
                     <div style={{ width: '1px', height: '59px', background: 'linear-gradient(270deg, #04B885 0%, #00946E 103.1%)' }}></div>
@@ -117,7 +169,7 @@ export default function SubBanner() {
                             textAlign: 'center',
                         }}
                     >
-                        <a href="/" style={{ display: 'flex', placeItems: 'center', gap: '5px', justifyContent: 'center', cursor: 'pointer' }}>
+                        <a href={LINK_APP_SMART_LIQUIDITY} target="_blank" rel="noreferrer" style={{ display: 'flex', placeItems: 'center', gap: '5px', justifyContent: 'center', cursor: 'pointer' }}>
                             <p className="title-box-2" style={{ color: 'white', fontSize: '14px', lineHeight: '19px' }}>
                                 Smart Liquidity APR
                             </p>

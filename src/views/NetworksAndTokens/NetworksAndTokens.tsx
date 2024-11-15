@@ -6,7 +6,7 @@ import { imagePath } from 'src/Constants/imagePath';
 export default function NetworksAndTokens() {
     return (
         <div style={{ marginTop: '150px' }}>
-            <div style={{ textAlign: 'center' }}>
+            <div data-aos="fade-up" style={{ textAlign: 'center' }}>
                 <span
                     style={{
                         fontSize: '45px',
@@ -51,24 +51,24 @@ export default function NetworksAndTokens() {
             <div className="container-networks-tokens" style={{ marginTop: '20px', display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
                 <div className="item1">
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px', flexWrap: 'wrap', gap: '10px' }}>
-                        <div data-aos="fade-down">
+                        <div data-aos="fade-right">
                             <BoxChainSupport bgColor="black" icon={imagePath.ICON_ORAICHAIN_2} name="Oraichain" />
                         </div>
-                        <div data-aos="fade-down" data-aos-delay="200">
+                        <div data-aos="fade-right" data-aos-delay="200">
                             <BoxChainSupport bgColor="blue" icon={imagePath.ICON_ETHER} name="Ethereum" />
                         </div>
-                        <div data-aos="fade-down" data-aos-delay="700">
+                        <div data-aos="fade-right" data-aos-delay="700">
                             <BoxChainSupport bgColor="black" icon={imagePath.ICON_BNB_CHAIN} name="BNB Chain" />
                         </div>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '10px' }}>
-                        <div data-aos="fade-down" data-aos-delay="1200">
+                        <div data-aos="fade-right" data-aos-delay="2200">
                             <BoxChainSupport bgColor="blue" icon={imagePath.ICON_OSMOSIS} name="Osmosis" />
                         </div>
-                        <div data-aos="fade-down" data-aos-delay="1700">
+                        <div data-aos="fade-right" data-aos-delay="1700">
                             <BoxChainSupport bgColor="black" icon={imagePath.ICON_TRON_MAINNET} name="Tron Mainnet" />
                         </div>
-                        <div data-aos="fade-down" data-aos-delay="2200">
+                        <div data-aos="fade-right" data-aos-delay="1200">
                             <BoxChainSupport bgColor="blue" icon={imagePath.ICON_COSMOSHUB} name="Cosmos Hub" />
                         </div>
                     </div>
@@ -84,18 +84,22 @@ export default function NetworksAndTokens() {
                         <Image data-aos-delay="1800" data-aos="fade-right" src={imagePath.ICON_COSMOSHUB} alt="logo oraichain" width={30} height={30} className="logo oraichain" />
                     </div>
                 </div>
-                <div className="item2" data-aos="fade-left">
+                <div className="item2">
                     <div style={{ marginBottom: '30px' }}>
-                        <p className="h3 " style={{ marginBottom: '5px', fontSize: '22px', color: '#57645E' }}>
+                        <p data-aos="fade-left" className="h3 " style={{ marginBottom: '5px', fontSize: '22px', color: '#57645E' }}>
                             Seamless Interoperability
                         </p>
-                        <p style={{ color: '#838383' }}>Interact with a growing network of DeFi protocols and chains - ALL IN ONE PLATFORM.</p>
+                        <p data-aos="fade-left" data-aos-delay="300" style={{ color: '#838383' }}>
+                            Interact with a growing network of DeFi protocols and chains - ALL IN ONE PLATFORM.
+                        </p>
                     </div>
                     <div style={{ marginBottom: '0px' }}>
-                        <p className="h3 " style={{ marginBottom: '5px', fontSize: '22px', color: '#57645E' }}>
+                        <p data-aos="fade-left" data-aos-delay="500" className="h3 " style={{ marginBottom: '5px', fontSize: '22px', color: '#57645E' }}>
                             Diverse Farming Strategies
                         </p>
-                        <p style={{ color: '#838383' }}>Access a range of yield-generating assets – WITH MORE TO COME.</p>
+                        <p data-aos="fade-left" data-aos-delay="800" style={{ color: '#838383' }}>
+                            Access a range of yield-generating assets – WITH MORE TO COME.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -107,7 +111,7 @@ function BoxChainSupport({ icon, name, bgColor }: { icon: string; name: string; 
     return (
         <div
             style={{
-                width: '170px',
+                width: '180px',
                 height: '68px',
                 borderRadius: '12px',
                 backgroundColor: bgColor == 'black' ? '#222' : '#D0FAE7',

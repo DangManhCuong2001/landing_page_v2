@@ -8,7 +8,7 @@ import { LINK_COINGECKO, LINK_COINMARKETCAP, LINK_DEXTOOLS, LINK_MEXC, LINK_ORAI
 export default function BannerOCHToken() {
     return (
         <Container style={{ marginTop: '160px', overflow: 'hidden' }}>
-            <div className="banner-och" style={{ width: '100%', border: '2px solid #8BE4BE', borderRadius: '20px', background: '#F5FFFB' }}>
+            <div data-aos="fade-up" className="banner-och" style={{ width: '100%', border: '2px solid #8BE4BE', borderRadius: '20px', background: '#F5FFFB' }}>
                 <div>
                     <p
                         className={SERVETICA_400.className}

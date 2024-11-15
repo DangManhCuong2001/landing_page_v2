@@ -20,6 +20,14 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.h1 {
+    font-weight: 700;
+    font-size: 52px;
+    @media (max-width: 764px) {
+        font-size: 40px;
+    }
+}
+
 .h3 {
     @apply text-[22px] font-[700] text-[#727272];
 }
@@ -40,7 +48,7 @@ body {
     @apply bg-[#333333] hover:bg-[linear-gradient(275deg,_#5BF193_4.05%,_#00A178_50.05%,_#015640_100%)];
 }
 .button-gardient {
-    @apply w-[160px] h-[46px] bg-[linear-gradient(275deg,_#5BF193_4.05%,_#00A178_50.05%,_#015640_100%)] border-[#04B885] rounded-[22px] text-white p-[9px] px-[20px] hover:bg-[#762b2b];
+    @apply bg-[linear-gradient(275deg,_#5BF193_4.05%,_#00A178_50.05%,_#015640_100%)] border-[#04B885] rounded-[22px] text-white p-[9px] px-[20px] hover:bg-[linear-gradient(99deg,_#0AE16B_0%,_#69F59D_70.15%,_#40FF96_100%)];
 }
 
 .grid-view-2 {
@@ -149,3 +157,5 @@ body {
         @apply grid-cols-1 flex justify-center;
     }
 }
+
+@import url(./banner.scss);
