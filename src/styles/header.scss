@@ -1,0 +1,12 @@
+.wrap-header {
+    @apply flex items-center  pt-8 justify-between;
+    .header-logo {
+        @apply w-36 h-11 max-w-none;
+    }
+}
+.btn-header {
+    @apply w-[160px] h-[46px] bg-[linear-gradient(275deg,_#5BF193_4.05%,_#00A178_50.05%,_#015640_100%)] border-[#04B885] rounded-[22px] text-white p-[9px] px-[20px];
+    /* .launch-app {
+        @apply size-[16px];
+    } */
+}
