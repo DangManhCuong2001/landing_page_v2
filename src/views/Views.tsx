@@ -11,9 +11,10 @@ import ContactUs from './ContactUs/ContactUs';
 
 export default function Views() {
     return (
-        <div style={{ position: 'relative', width: '100%', zIndex: 4, top: '-145px', left: 0 }}>
+        <div className="view-container" style={{ position: 'relative', width: '100%', zIndex: 4, top: '-145px', left: 0 }}>
             <div style={{ height: '100%', position: 'absolute', width: '100%', top: 0, left: 0 }}>
                 <div
+                    className="bg-image"
                     style={{
                         // marginTop: '90px',
                         height: '427px',

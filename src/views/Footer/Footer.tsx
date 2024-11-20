@@ -26,7 +26,7 @@ export default function Footer() {
     return (
         <div style={{ background: '#0E1713', padding: '71px 0px', minHeight: '287px' }}>
             <Container>
-                <div style={{ display: 'flex', gap: '80px', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', columnGap: '200px', rowGap: '80px', flexWrap: 'wrap' }}>
                     <div>
                         <Image src={imagePath.LOGO_FULL_HORIZONTAL_WHITE} alt="logo orchai" title="logo orchai" width={120} height={50} className="header-logo" style={{ marginBottom: '30px' }} />
                         <span style={{ fontSize: '12px', color: '#4F6266' }}>
@@ -84,7 +84,7 @@ export default function Footer() {
                             </a> */}
                         </div>
                     </div>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '80px' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', columnGap: '200px', rowGap: '80px' }}>
                         <div>
                             <p style={{ color: '#4F6266', fontSize: '14px', marginBottom: '10px' }}>Resources</p>
                             <div style={{ marginBottom: '10px' }}>
@@ -104,17 +104,24 @@ export default function Footer() {
                         <div>
                             <p style={{ color: '#4F6266', fontSize: '14px', marginBottom: '10px' }}>Legal</p>
                             <div style={{ marginBottom: '10px' }}>
-                                <a className="link-hover" href={'/cookies-policy'} target="_blank" rel="noreferrer" style={{ color: '#95A7AC', fontSize: '14px', cursor: 'pointer' }}>
+                                <a className="link-hover" href={'https://orchai.io/cookies-policy'} target="_blank" rel="noreferrer" style={{ color: '#95A7AC', fontSize: '14px', cursor: 'pointer' }}>
                                     Cookies Policy
                                 </a>
                             </div>
                             <div style={{ marginBottom: '10px' }}>
-                                <a className="link-hover" href={'/privacy-policy'} target="_blank" rel="noreferrer" style={{ color: '#95A7AC', fontSize: '14px', cursor: 'pointer' }}>
+                                <a className="link-hover" href={'https://orchai.io/privacy-policy'} target="_blank" rel="noreferrer" style={{ color: '#95A7AC', fontSize: '14px', cursor: 'pointer' }}>
                                     Privacy Policy{' '}
                                 </a>
                             </div>
+
                             <div>
-                                <a className="link-hover" href={'/terms-of-service'} target="_blank" rel="noreferrer" style={{ color: '#95A7AC', fontSize: '14px', cursor: 'pointer' }}>
+                                <a
+                                    className="link-hover"
+                                    href={'https://orchai.io/terms-of-service'}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    style={{ color: '#95A7AC', fontSize: '14px', cursor: 'pointer' }}
+                                >
                                     Terms of Service
                                 </a>
                             </div>

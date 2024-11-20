@@ -15,7 +15,7 @@ export const SERVETICA_400 = localFont({
 
 export default function Banner() {
     return (
-        <div className="banner" style={{ position: 'relative', overflow: 'hidden', height: '95svh' }}>
+        <div className="banner" style={{ position: 'relative', overflow: 'hidden' }}>
             <Container style={{ position: 'relative' }}>
                 <div
                     style={{
@@ -42,12 +42,16 @@ export default function Banner() {
                                     color: 'white',
                                 }}
                             >
-                                <p data-aos="fade-right">DEFI </p>
-                                <p data-aos="fade-right" data-aos-delay="300" className={SERVETICA_400.className} style={{ color: '#49E18D' }}>
-                                    ORCH
-                                    <span style={{ color: 'white' }}>ESTRATOR</span>
+                                <p className="title-banner" data-aos="fade-right">
+                                    DEFI{' '}
                                 </p>
-                                <p data-aos="fade-right" data-aos-delay="600">
+                                <p data-aos="fade-right" data-aos-delay="300" className={SERVETICA_400.className} style={{ color: '#52E990' }}>
+                                    <span className="title-banner">ORCH</span>
+                                    <span className="title-banner" style={{ color: 'white' }}>
+                                        ESTRATOR
+                                    </span>
+                                </p>
+                                <p className="title-banner" data-aos="fade-right" data-aos-delay="600">
                                     <span>POWERED BY </span>
                                     <span className={SERVETICA_400.className} style={{ color: '#49E18D' }}>
                                         AI
@@ -59,7 +63,7 @@ export default function Banner() {
                                 data-aos-delay="900"
                                 style={{
                                     height: '46px',
-                                    width: '410px',
+                                    width: '400px',
                                     background: 'linear-gradient(90deg, rgba(14, 23, 19, 0.00) 0%, #0A4C31 48%, rgba(14, 23, 19, 0.00) 100%)',
                                     alignItems: 'center',
                                     display: 'flex',
@@ -68,6 +72,7 @@ export default function Banner() {
                                 }}
                             >
                                 <span
+                                    className="sub-title-banner"
                                     style={{
                                         color: '#95A7AC',
                                         fontFamily: 'Arial',
@@ -98,7 +103,7 @@ export default function Banner() {
                                 </div>
                             </div>
                         </div>
-                        <div className="video-banner" style={{ position: 'absolute', top: '-100px', right: '-60px', zIndex: 0, width: '50%' }}>
+                        <div className="container-video-banner" style={{ position: 'absolute', top: '-100px', right: '-60px', zIndex: 0, width: '50%' }}>
                             <div style={{ maxWidth: '900px', marginTop: '100px', height: '500px', overflow: 'hidden' }}>
                                 <video style={{ pointerEvents: 'none', userSelect: 'none', width: '100%', height: 'calc(90% + 2px)' }} autoPlay loop muted>
                                     <source src="/video/hero_banner_orchai_landing.mp4" type="video/mp4" />
@@ -107,6 +112,7 @@ export default function Banner() {
                             </div>
                         </div>
                         <div
+                            className="box-blur"
                             style={{
                                 borderRadius: '880.496px',
                                 background: 'radial-gradient(37.72% 37.72% at 50% 50%, rgba(0, 116, 62, 0.80) 0%, rgba(9, 25, 24, 0.00) 100%)',

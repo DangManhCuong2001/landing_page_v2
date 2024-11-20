@@ -55,7 +55,7 @@ async function getData() {
 export default async function SubBanner() {
     const data = await getData();
     return (
-        <div className="sub-banner" style={{ height: '145px' }}>
+        <div className="sub-banner" style={{ height: '145px', width: '100%', position: 'relative' }}>
             <div
                 className="item1"
                 style={{
@@ -68,7 +68,7 @@ export default async function SubBanner() {
                 }}
             >
                 <div className="trusted" style={{ paddingRight: '150px' }}>
-                    <p style={{ fontWeight: 600, fontSize: '16px' }}>Trusted by</p>
+                    <p style={{ fontWeight: 600, fontSize: '16px', color: '#0E1713' }}>Trusted by</p>
                     <div style={{ display: 'flex', placeItems: 'center', gap: '20px', justifyContent: 'space-between', flexWrap: 'wrap', marginTop: '10px' }}>
                         <Image
                             data-aos="fade-right"
@@ -133,6 +133,7 @@ export default async function SubBanner() {
                         placeItems: 'center',
                         width: '419px',
                         backdropFilter: 'blur(6px)',
+                        boxShadow: '0px 4px 5px 0px rgba(5, 65, 47, 0.60), 0px 0px 8px 0px rgba(187, 255, 228, 0.40) inset',
                     }}
                 >
                     <div
@@ -140,9 +141,10 @@ export default async function SubBanner() {
                         style={{
                             padding: '18px 28px',
                             textAlign: 'center',
+                            width: '46%',
                         }}
                     >
-                        <p className="title-box-1" style={{ color: 'white', fontSize: '14px', lineHeight: '19px' }}>
+                        <p className="title-box-1" style={{ color: '#FEFEF6', fontSize: '14px', lineHeight: '19px' }}>
                             Total TVL
                         </p>
                         <p
@@ -155,6 +157,7 @@ export default async function SubBanner() {
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
                                 lineHeight: '57px',
+                                color: '#49E18D',
                             }}
                         >
                             ${compactNumber(Number(data?.moneyMarketTVL) + Number(data?.liquidStakingTVL))}
@@ -165,15 +168,15 @@ export default async function SubBanner() {
                         className="box2"
                         style={{
                             padding: '18px 28px',
-
+                            width: '46%',
                             textAlign: 'center',
                         }}
                     >
                         <a href={LINK_APP_SMART_LIQUIDITY} target="_blank" rel="noreferrer" style={{ display: 'flex', placeItems: 'center', gap: '5px', justifyContent: 'center', cursor: 'pointer' }}>
-                            <p className="title-box-2" style={{ color: 'white', fontSize: '14px', lineHeight: '19px' }}>
+                            <p className="title-box-2" style={{ color: '#FEFEF6', fontSize: '14px', lineHeight: '19px' }}>
                                 Smart Liquidity APR
                             </p>
-                            <ArrowRightIcon />
+                            <ArrowRightIcon color="#FEFEF6" />
                         </a>
                         <p
                             className="value-box-2"
@@ -185,6 +188,7 @@ export default async function SubBanner() {
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
                                 lineHeight: '57px',
+                                color: '#49E18D',
                             }}
                         >
                             89%

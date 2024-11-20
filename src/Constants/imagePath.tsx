@@ -1,4 +1,10 @@
 import THUMBNAIL from '../../public/img/thumbnail.png';
+import BLOG_1 from '../../public/img/blog-1.png';
+import BLOG_2 from '../../public/img/blog-2.png';
+import BLOG_3 from '../../public/img/blog-3.png';
+import BLOG_4 from '../../public/img/blog-4.png';
+import BLOG_5 from '../../public/img/blog-5.png';
+import BLOG_6 from '../../public/img/blog-6.png';
 
 export const imagePath = {
     THUMBNAIL,
@@ -40,12 +46,12 @@ export const imagePath = {
 
     IMAGE_OCH_1: '/img/img-token-och-1.png',
     IMAGE_OCH_2: '/img/img-token-och-2.png',
-    BLOG_1: '/img/blog-1.png',
-    BLOG_2: '/img/blog-2.png',
-    BLOG_3: '/img/blog-3.png',
-    BLOG_4: '/img/blog-4.png',
-    BLOG_5: '/img/blog-5.png',
-    BLOG_6: '/img/blog-6.png',
+    BLOG_1,
+    BLOG_2,
+    BLOG_3,
+    BLOG_4,
+    BLOG_5,
+    BLOG_6,
     TEST: '/img/test.png',
     TEST2: '/img/test-2.png',
     BANNER_FRAME_1: '/img/banner-frame-1.png',

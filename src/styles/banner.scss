@@ -2,17 +2,33 @@
     /* @apply bg-bgBanner w-full h-[100%]; */
     background-color: #0e1713;
     width: '100%';
-
+    height: 95svh;
     @media (max-width: 1024px) {
+        height: 60svh !important;
+    }
+    @media (max-width: 960px) {
         height: 70svh !important;
     }
 
     @media (max-width: 600px) {
-        height: 95svh !important;
-        .video-banner {
-            top: 180px !important;
-            right: 100px !important;
-            width: 60% !important;
+        height: 115svh !important;
+        .container-video-banner {
+            top: 200px !important;
+            right: 0px !important;
+            width: 100% !important;
+            .video-banner {
+            }
+        }
+        .title-banner {
+            font-size: 40px !important;
+        }
+        .sub-title-banner {
+            font-size: 14px !important;
+        }
+        .box-blur {
+            // display: none;
+            // z-index: 0 !important;
+            bottom: -930px !important;
         }
     }
 }

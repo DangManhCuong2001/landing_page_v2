@@ -10,9 +10,9 @@ export default function Community() {
         <Container style={{ marginTop: '120px' }}>
             <div data-aos="fade-up" style={{ border: '2px solid #8BE4BE', background: '#0E1713', borderRadius: '20px', width: '100%', display: 'flex', position: 'relative' }}>
                 <div style={{ width: '50%', overflow: 'hidden' }}>
-                    <Image src={imagePath.COMMUNITY_BANNER} alt="community" width={412} height={347} className="community" style={{ position: 'absolute', left: 0, bottom: 0 }} />
+                    <Image src={imagePath.COMMUNITY_BANNER} alt="community" width={412} height={347} className="community" style={{ position: 'absolute', left: 0, bottom: 0, borderRadius: '20px' }} />
                 </div>
-                <div style={{ width: '50%', padding: '88px 51px', position: 'relative', zIndex: 0, backdropFilter: 'blur(6px)', minWidth: '380px', borderRadius: '20px' }}>
+                <div style={{ width: '50%', padding: '88px 40px', position: 'relative', zIndex: 0, backdropFilter: 'blur(6px)', minWidth: '330px', borderRadius: '20px' }}>
                     <span style={{ fontSize: '40px', fontWeight: 700, color: 'white' }}>
                         Join our{' '}
                         <span style={{ background: 'linear-gradient(275deg, #58FF96 -11.3%, #00A178 101.19%)', backgroundClip: 'text', WebkitBackgroundClip: 'text', color: 'transparent' }}>

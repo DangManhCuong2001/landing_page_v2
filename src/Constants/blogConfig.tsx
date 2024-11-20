@@ -1,9 +1,10 @@
+import { StaticImageData } from 'next/image';
 import { imagePath } from './imagePath';
 
 type TBlogConfig = {
     title: string;
     link: string;
-    banner: string;
+    banner: StaticImageData;
     date: string;
 };
 

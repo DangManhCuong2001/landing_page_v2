@@ -21,26 +21,28 @@ export default function ContactUs() {
         >
             {/* <Image src={imagePath.CONTACT_US} alt="contactUS" width={100} height={100} layout="responsive" className="contactUS" /> */}
             <div className="container-contactus" style={{ display: 'flex', placeItems: 'center', justifyContent: 'space-between', maxWidth: '1096px', margin: '0 auto', gap: '40px', height: '400px' }}>
-                <div style={{ maxWidth: '410px' }}>
+                <div className="text-contact" style={{ maxWidth: '410px' }}>
                     <p style={{ color: 'white', fontWeight: 700, fontSize: '45px' }}>Contact Us</p>
                     <p style={{ color: '#95A7AC', marginTop: '10px' }}>We always want to hear from you! Let us know if there is anything that we can help you with.</p>
-                    <div
-                        style={{
-                            width: '328px',
-                            height: '52px',
-                            border: '1px solid #1B2626',
-                            borderRadius: '99px',
-                            marginTop: '50px',
-                            background: 'rgba(38, 53, 53, 0.50)',
-                            display: 'flex',
-                            placeItems: 'center',
-                            padding: '20px 12px',
-                        }}
-                    >
-                        <input placeholder="Enter your email..." type="email" style={{ background: '#1B2626', color: 'white', border: '0px solid', outline: 'none' }}></input>
-                        <button className="button-gardient" style={{ width: '141px', height: '37px', borderRadius: '22px', padding: '5px 5px' }}>
-                            <a style={{ color: 'white', fontWeight: 600, fontSize: '15px' }}>Send</a>
-                        </button>
+                    <div className="send-email">
+                        <div
+                            style={{
+                                width: '328px',
+                                height: '52px',
+                                border: '1px solid #1B2626',
+                                borderRadius: '99px',
+                                marginTop: '50px',
+                                background: 'rgba(38, 53, 53, 0.50)',
+                                display: 'flex',
+                                placeItems: 'center',
+                                padding: '20px 12px',
+                            }}
+                        >
+                            <input placeholder="Enter your email..." type="email" style={{ background: '#1B2626', color: 'white', border: '0px solid', outline: 'none' }}></input>
+                            <button className="button-gardient" style={{ width: '141px', height: '37px', borderRadius: '22px', padding: '5px 5px' }}>
+                                <a style={{ color: 'white', fontWeight: 600, fontSize: '15px' }}>Send</a>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div className="img_email" style={{ height: '100%', width: '36%', display: 'flex', placeItems: 'center' }}>
